@@ -1,25 +1,7 @@
 window.tournamentData = {
     "r16": [
         {
-            "p1": "Roshan B. Magar",
-            "p2": "Namsang Subba",
-            "s1_1": 0,
-            "s1_2": 0,
-            "s2_1": 0,
-            "s2_2": 0,
-            "w": 0
-        },
-        {
-            "p1": "Player 7",
-            "p2": "D Yozon King",
-            "s1_1": 0,
-            "s1_2": 0,
-            "s2_1": 0,
-            "s2_2": 0,
-            "w": 0
-        },
-        {
-            "p1": "Player 12",
+            "p1": "Ganesh Nepali",
             "p2": "Player 15",
             "s1_1": 0,
             "s1_2": 0,
@@ -28,8 +10,8 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "Ashman Titung",
-            "p2": "Player 9",
+            "p1": "Roshan B. Magar",
+            "p2": "Player 13",
             "s1_1": 0,
             "s1_2": 0,
             "s2_1": 0,
@@ -37,8 +19,8 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "Player 16",
-            "p2": "Player 5",
+            "p1": "Player 9",
+            "p2": "Player 7",
             "s1_1": 0,
             "s1_2": 0,
             "s2_1": 0,
@@ -46,8 +28,8 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "Player 13",
-            "p2": "Player 8",
+            "p1": "Namsang Subba",
+            "p2": "Ashman Titung",
             "s1_1": 0,
             "s1_2": 0,
             "s2_1": 0,
@@ -55,8 +37,8 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "Player 6",
-            "p2": "Player 11",
+            "p1": "Player 11",
+            "p2": "Amax Hood",
             "s1_1": 0,
             "s1_2": 0,
             "s2_1": 0,
@@ -65,7 +47,25 @@ window.tournamentData = {
         },
         {
             "p1": "Player 10",
+            "p2": "D Yozon King",
+            "s1_1": 0,
+            "s1_2": 0,
+            "s2_1": 0,
+            "s2_2": 0,
+            "w": 0
+        },
+        {
+            "p1": "Player 8",
             "p2": "Player 14",
+            "s1_1": 0,
+            "s1_2": 0,
+            "s2_1": 0,
+            "s2_2": 0,
+            "w": 0
+        },
+        {
+            "p1": "Player 16",
+            "p2": "Player 12",
             "s1_1": 0,
             "s1_2": 0,
             "s2_1": 0,
@@ -101,6 +101,37 @@ window.tournamentData = {
             "s2_2": 0,
             "w": 0
         },
+        {
+            "p1": "TBD",
+            "p2": "TBD",
+            "s1_1": 0,
+            "s1_2": 0,
+            "s2_1": 0,
+            "s2_2": 0,
+            "w": 0
+        }
+    ],
+    "sf": [
+        {
+            "p1": "TBD",
+            "p2": "TBD",
+            "s1_1": 0,
+            "s1_2": 0,
+            "s2_1": 0,
+            "s2_2": 0,
+            "w": 0
+        },
+        {
+            "p1": "TBD",
+            "p2": "TBD",
+            "s1_1": 0,
+            "s1_2": 0,
+            "s2_1": 0,
+            "s2_2": 0,
+            "w": 0
+        }
+    ],
+    "f": [
         {
             "p1": "TBD",
             "p2": "TBD",
