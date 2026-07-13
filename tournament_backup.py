@@ -14,10 +14,10 @@ def initialize_tournament():
     random.shuffle(players)
     
     data = {
-        "r16": [{"p1": players[i], "p2": players[i+1], "s1_1": None, "s1_2": None, "s2_1": None, "s2_2": None, "w": 0} for i in range(0, 16, 2)],
-        "qf": [{"p1": "TBD", "p2": "TBD", "s1_1": None, "s1_2": None, "s2_1": None, "s2_2": None, "w": 0} for _ in range(4)],
-        "sf": [{"p1": "TBD", "p2": "TBD", "s1_1": None, "s1_2": None, "s2_1": None, "s2_2": None, "w": 0} for _ in range(2)],
-        "f": [{"p1": "TBD", "p2": "TBD", "s1_1": None, "s1_2": None, "s2_1": None, "s2_2": None, "w": 0}],
+        "r16": [{"p1": players[i], "p2": players[i+1], "s1_1": 0, "s1_2": 0, "s2_1": 0, "s2_2": 0, "w": 0} for i in range(0, 16, 2)],
+        "qf": [{"p1": "TBD", "p2": "TBD", "s1_1": 0, "s1_2": 0, "s2_1": 0, "s2_2": 0, "w": 0} for _ in range(4)],
+        "sf": [{"p1": "TBD", "p2": "TBD", "s1_1": 0, "s1_2": 0, "s2_1": 0, "s2_2": 0, "w": 0} for _ in range(2)],
+        "f": [{"p1": "TBD", "p2": "TBD", "s1_1": 0, "s1_2": 0, "s2_1": 0, "s2_2": 0, "w": 0}],
         "champion": "TBD"
     }
     save_data(data)
@@ -34,49 +34,9 @@ def load_data():
         with open(DATA_FILE, "r") as f:
             content = f.read()
             json_str = content.split("window.tournamentData = ")[1].split(";\ninitRender();")[0]
-            data = json.loads(json_str)
-            
-            # --- AUTOMATIC MIGRATION PIPELINE ---
-            # Automatically maps unplayed '0' values to 'None' dynamically so you don't lose your 16 players
-            migrated = False
-            for key in ["r16", "qf", "sf", "f"]:
-                if key in data:
-                    for match in data[key]:
-                        if match.get('w') == 0:  # Only convert if the match hasn't been played
-                            for score_field in ['s1_1', 's1_2', 's2_1', 's2_2']:
-                                if match.get(score_field) == 0:
-                                    match[score_field] = None
-                                    migrated = True
-            if migrated:
-                with open(DATA_FILE, "w") as f_out:
-                    f_out.write(f"window.tournamentData = {json.dumps(data, indent=4)};\ninitRender();")
-            # ------------------------------------
-            
-            return data
+            return json.loads(json_str)
     except:
         return None
-
-def edit_player_names():
-    data = load_data()
-    if not data:
-        print("❌ Data error. Initialize tournament first.")
-        return
-    
-    print("\n--- Current Round of 16 Matchups ---")
-    for idx, m in enumerate(data["r16"]):
-        print(f"Match {idx+1}: (1) {m['p1']} vs (2) {m['p2']}")
-        
-    m_idx = int(input("\nSelect Match Number you want to edit: ")) - 1
-    p_select = input("Edit Player 1 or Player 2? (Type 1 or 2): ")
-    new_name = input("Enter new/corrected name: ").strip()
-    
-    if p_select == "1":
-        data["r16"][m_idx]["p1"] = new_name
-    elif p_select == "2":
-        data["r16"][m_idx]["p2"] = new_name
-        
-    save_data(data)
-    print("📝 Player name updated locally! Remember to run push.bat to update the website.")
 
 def update_scores():
     data = load_data()
@@ -141,13 +101,11 @@ def main():
         print("\n=== eFootball S13 Dashboard ===")
         print("1. Initialize New Tournament Layout")
         print("2. Enter Live Match Scores")
-        print("3. Edit/Correct Player Names")
-        print("4. Exit Terminal")
+        print("3. Exit Terminal")
         c = input("Action: ")
         if c == "1": initialize_tournament()
         elif c == "2": update_scores()
-        elif c == "3": edit_player_names()
-        elif c == "4": break
+        elif c == "3": break
 
 if __name__ == "__main__":
     main()

@@ -296,10 +296,10 @@
     <!-- Fallback Structure -->
     <script>
         window.tournamentData = {
-            "r16": Array.from({length: 8}, () => ({"p1": "Awaiting Init", "p2": "Awaiting Init", "s1_1": null, "s1_2": null, "s2_1": null, "s2_2": null, "w": 0})),
-            "qf": Array.from({length: 4}, () => ({"p1": "TBD", "p2": "TBD", "s1_1": null, "s1_2": null, "s2_1": null, "s2_2": null, "w": 0})),
-            "sf": Array.from({length: 2}, () => ({"p1": "TBD", "p2": "TBD", "s1_1": null, "s1_2": null, "s2_1": null, "s2_2": null, "w": 0})),
-            "f": [{"p1": "TBD", "p2": "TBD", "s1_1": null, "s1_2": null, "s2_1": null, "s2_2": null, "w": 0}],
+            "r16": [{"p1": "Awaiting Init", "p2": "Awaiting Init", "s1_1": 0, "s1_2": 0, "s2_1": 0, "s2_2": 0, "w": 0} for(let i=0;i<8;i++)],
+            "qf": [{"p1": "TBD", "p2": "TBD", "s1_1": 0, "s1_2": 0, "s2_1": 0, "s2_2": 0, "w": 0} for(let i=0;i<4;i++)],
+            "sf": [{"p1": "TBD", "p2": "TBD", "s1_1": 0, "s1_2": 0, "s2_1": 0, "s2_2": 0, "w": 0} for(let i=0;i<2;i++)],
+            "f": [{"p1": "TBD", "p2": "TBD", "s1_1": 0, "s1_2": 0, "s2_1": 0, "s2_2": 0, "w": 0}],
             "champion": "TBD"
         };
     </script>
@@ -318,23 +318,18 @@
         }
 
         function generateMatchHTML(m) {
-            const s1_1 = (m.s1_1 === null || m.s1_1 === undefined) ? '-' : m.s1_1;
-            const s1_2 = (m.s1_2 === null || m.s1_2 === undefined) ? '-' : m.s1_2;
-            const s2_1 = (m.s2_1 === null || m.s2_1 === undefined) ? '-' : m.s2_1;
-            const s2_2 = (m.s2_2 === null || m.s2_2 === undefined) ? '-' : m.s2_2;
-
             return `
                 <div class="match">
                     <div class="team ${m.w === 1 ? 'winner' : ''}">
                         <span>${m.p1}</span> 
                         <div class="scores-wrapper">
-                            <span class="score">${s1_1}</span><span class="score">${s1_2}</span>
+                            <span class="score">${m.s1_1}</span><span class="score">${m.s1_2}</span>
                         </div>
                     </div>
                     <div class="team ${m.w === 2 ? 'winner' : ''}">
                         <span>${m.p2}</span> 
                         <div class="scores-wrapper">
-                            <span class="score">${s2_1}</span><span class="score">${s2_2}</span>
+                            <span class="score">${m.s2_1}</span><span class="score">${m.s2_2}</span>
                         </div>
                     </div>
                 </div>
