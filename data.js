@@ -1,25 +1,7 @@
 window.tournamentData = {
     "r16": [
         {
-            "p1": "Amax Hood",
-            "p2": "Player 14",
-            "s1_1": 0,
-            "s1_2": 0,
-            "s2_1": 0,
-            "s2_2": 0,
-            "w": 0
-        },
-        {
-            "p1": "Ashman Titung",
-            "p2": "Player 13",
-            "s1_1": 0,
-            "s1_2": 0,
-            "s2_1": 0,
-            "s2_2": 0,
-            "w": 0
-        },
-        {
-            "p1": "Namsang Subba",
+            "p1": "Basnet Umesh",
             "p2": "Siv Sunar",
             "s1_1": 0,
             "s1_2": 0,
@@ -28,8 +10,8 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "Player 16",
-            "p2": "\u092c\u0938\u0928\u094d\u0924 \u0924\u093e\u092e\u093e\u0919",
+            "p1": "Smile Xhettri",
+            "p2": "Roshan B. Magar",
             "s1_1": 0,
             "s1_2": 0,
             "s2_1": 0,
@@ -37,8 +19,8 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "Player 15",
-            "p2": "D Yozon King",
+            "p1": "Subash Tamang",
+            "p2": "Shrestha Sakar",
             "s1_1": 0,
             "s1_2": 0,
             "s2_1": 0,
@@ -46,7 +28,25 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "Player 12",
+            "p1": "Kushal Karki",
+            "p2": "Amax Hood",
+            "s1_1": 0,
+            "s1_2": 0,
+            "s2_1": 0,
+            "s2_2": 0,
+            "w": 0
+        },
+        {
+            "p1": "D Yozon King",
+            "p2": "Ashman Titung",
+            "s1_1": 0,
+            "s1_2": 0,
+            "s2_1": 0,
+            "s2_2": 0,
+            "w": 0
+        },
+        {
+            "p1": "\u0928\u093f\u0930\u0928\u094d\u091c\u0928 \u0925\u093e\u092a\u093e",
             "p2": "Ganesh Nepali",
             "s1_1": 0,
             "s1_2": 0,
@@ -56,7 +56,7 @@ window.tournamentData = {
         },
         {
             "p1": "Bixu Thapa",
-            "p2": "Player 11",
+            "p2": "Thapa Ajay",
             "s1_1": 0,
             "s1_2": 0,
             "s2_1": 0,
@@ -64,8 +64,8 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "Roshan B. Magar",
-            "p2": "Smile Xhettri",
+            "p1": "\u092c\u0938\u0928\u094d\u0924 \u0924\u093e\u092e\u093e\u0919",
+            "p2": "Namsang Subba",
             "s1_1": 0,
             "s1_2": 0,
             "s2_1": 0,
