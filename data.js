@@ -46,7 +46,7 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "\u0928\u093f\u0930\u0928\u094d\u091c\u0928 \u0925\u093e\u092a\u093e",
+            "p1": "Subash Tamang",
             "p2": "Ganesh Nepali",
             "s1_1": null,
             "s1_2": null,
