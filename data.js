@@ -3,11 +3,11 @@ window.tournamentData = {
         {
             "p1": "Kushal Karki",
             "p2": "Siv Sunar",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 4,
+            "s1_2": 2,
+            "s2_1": 7,
+            "s2_2": 5,
+            "w": 2
         },
         {
             "p1": "Smile Xhettri",
@@ -75,7 +75,7 @@ window.tournamentData = {
     ],
     "qf": [
         {
-            "p1": "TBD",
+            "p1": "Siv Sunar",
             "p2": "TBD",
             "s1_1": null,
             "s1_2": null,
