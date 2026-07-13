@@ -1,7 +1,7 @@
 window.tournamentData = {
     "r16": [
         {
-            "p1": "Basnet Umesh",
+            "p1": "Kushal Karki",
             "p2": "Siv Sunar",
             "s1_1": 0,
             "s1_2": 0,
@@ -28,7 +28,7 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "Kushal Karki",
+            "p1": "Basnet Umesh",
             "p2": "Amax Hood",
             "s1_1": 0,
             "s1_2": 0,
