@@ -66,11 +66,11 @@ window.tournamentData = {
         {
             "p1": "\u092c\u0938\u0928\u094d\u0924 \u0924\u093e\u092e\u093e\u0919",
             "p2": "Namsang Subba",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 12,
+            "s1_2": 3,
+            "s2_1": 1,
+            "s2_2": 0,
+            "w": 1
         }
     ],
     "qf": [
@@ -103,7 +103,7 @@ window.tournamentData = {
         },
         {
             "p1": "Bixu Thapa",
-            "p2": "TBD",
+            "p2": "\u092c\u0938\u0928\u094d\u0924 \u0924\u093e\u092e\u093e\u0919",
             "s1_1": null,
             "s1_2": null,
             "s2_1": null,
