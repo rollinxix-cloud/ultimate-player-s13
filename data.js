@@ -21,11 +21,11 @@ window.tournamentData = {
         {
             "p1": "\u0928\u093f\u0930\u0928\u094d\u091c\u0928 \u0925\u093e\u092a\u093e",
             "p2": "Shrestha Sakar",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 1,
+            "s1_2": 0,
+            "s2_1": 7,
+            "s2_2": 3,
+            "w": 2
         },
         {
             "p1": "Basnet Umesh",
@@ -84,7 +84,7 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "TBD",
+            "p1": "Shrestha Sakar",
             "p2": "TBD",
             "s1_1": null,
             "s1_2": null,
