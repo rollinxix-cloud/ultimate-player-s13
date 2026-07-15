@@ -12,11 +12,11 @@ window.tournamentData = {
         {
             "p1": "Smile Xhettri",
             "p2": "Roshan B. Magar",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 2,
+            "s1_2": 1,
+            "s2_1": 2,
+            "s2_2": 2,
+            "w": 2
         },
         {
             "p1": "\u0928\u093f\u0930\u0928\u094d\u091c\u0928 \u0925\u093e\u092a\u093e",
@@ -76,7 +76,7 @@ window.tournamentData = {
     "qf": [
         {
             "p1": "Siv Sunar",
-            "p2": "TBD",
+            "p2": "Roshan B. Magar",
             "s1_1": null,
             "s1_2": null,
             "s2_1": null,
