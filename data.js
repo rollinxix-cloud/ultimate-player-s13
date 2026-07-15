@@ -39,20 +39,20 @@ window.tournamentData = {
         {
             "p1": "D Yozon King",
             "p2": "Ashman Titung",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 3,
+            "s1_2": 1,
+            "s2_1": 4,
+            "s2_2": 4,
+            "w": 2
         },
         {
             "p1": "Subash Tamang",
             "p2": "Ganesh Nepali",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 6,
+            "s1_2": 3,
+            "s2_1": 1,
+            "s2_2": 1,
+            "w": 1
         },
         {
             "p1": "Bixu Thapa",
@@ -93,8 +93,8 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "TBD",
-            "p2": "TBD",
+            "p1": "Ashman Titung",
+            "p2": "Subash Tamang",
             "s1_1": null,
             "s1_2": null,
             "s2_1": null,
