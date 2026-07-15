@@ -77,20 +77,20 @@ window.tournamentData = {
         {
             "p1": "Siv Sunar",
             "p2": "Roshan B. Magar",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 4,
+            "s1_2": 5,
+            "s2_1": 3,
+            "s2_2": 1,
+            "w": 1
         },
         {
             "p1": "Shrestha Sakar",
             "p2": "Amax Hood",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 4,
+            "s1_2": 4,
+            "s2_1": 3,
+            "s2_2": 1,
+            "w": 1
         },
         {
             "p1": "Ashman Titung",
@@ -113,8 +113,8 @@ window.tournamentData = {
     ],
     "sf": [
         {
-            "p1": "TBD",
-            "p2": "TBD",
+            "p1": "Siv Sunar",
+            "p2": "Shrestha Sakar",
             "s1_1": null,
             "s1_2": null,
             "s2_1": null,
