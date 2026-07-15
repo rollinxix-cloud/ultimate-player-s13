@@ -30,11 +30,11 @@ window.tournamentData = {
         {
             "p1": "Basnet Umesh",
             "p2": "Amax Hood",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 0,
+            "s1_2": 1,
+            "s2_1": 5,
+            "s2_2": 2,
+            "w": 2
         },
         {
             "p1": "D Yozon King",
@@ -85,7 +85,7 @@ window.tournamentData = {
         },
         {
             "p1": "Shrestha Sakar",
-            "p2": "TBD",
+            "p2": "Amax Hood",
             "s1_1": null,
             "s1_2": null,
             "s2_1": null,
