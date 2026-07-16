@@ -95,11 +95,11 @@ window.tournamentData = {
         {
             "p1": "Ashman Titung",
             "p2": "Subash Tamang",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 2,
+            "s1_2": 1,
+            "s2_1": 2,
+            "s2_2": 2,
+            "w": 2
         },
         {
             "p1": "Bixu Thapa",
@@ -122,7 +122,7 @@ window.tournamentData = {
             "w": 0
         },
         {
-            "p1": "TBD",
+            "p1": "Subash Tamang",
             "p2": "TBD",
             "s1_1": null,
             "s1_2": null,
