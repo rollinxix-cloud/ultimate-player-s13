@@ -104,11 +104,11 @@ window.tournamentData = {
         {
             "p1": "Bixu Thapa",
             "p2": "\u092c\u0938\u0928\u094d\u0924 \u0924\u093e\u092e\u093e\u0919",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 4,
+            "s1_2": 5,
+            "s2_1": 2,
+            "s2_2": 2,
+            "w": 1
         }
     ],
     "sf": [
@@ -123,7 +123,7 @@ window.tournamentData = {
         },
         {
             "p1": "Subash Tamang",
-            "p2": "TBD",
+            "p2": "Bixu Thapa",
             "s1_1": null,
             "s1_2": null,
             "s2_1": null,
