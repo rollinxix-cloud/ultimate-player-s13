@@ -124,17 +124,17 @@ window.tournamentData = {
         {
             "p1": "Subash Tamang",
             "p2": "Bixu Thapa",
-            "s1_1": null,
-            "s1_2": null,
-            "s2_1": null,
-            "s2_2": null,
-            "w": 0
+            "s1_1": 1,
+            "s1_2": 2,
+            "s2_1": 1,
+            "s2_2": 5,
+            "w": 2
         }
     ],
     "f": [
         {
             "p1": "Shrestha Sakar",
-            "p2": "TBD",
+            "p2": "Bixu Thapa",
             "s1_1": null,
             "s1_2": null,
             "s2_1": null,
