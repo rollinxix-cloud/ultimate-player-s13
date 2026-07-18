@@ -37,12 +37,11 @@ def load_data():
             data = json.loads(json_str)
             
             # --- AUTOMATIC MIGRATION PIPELINE ---
-            # Automatically maps unplayed '0' values to 'None' dynamically so you don't lose your 16 players
             migrated = False
             for key in ["r16", "qf", "sf", "f"]:
                 if key in data:
                     for match in data[key]:
-                        if match.get('w') == 0:  # Only convert if the match hasn't been played
+                        if match.get('w') == 0:  
                             for score_field in ['s1_1', 's1_2', 's2_1', 's2_2']:
                                 if match.get(score_field) == 0:
                                     match[score_field] = None
@@ -50,7 +49,6 @@ def load_data():
             if migrated:
                 with open(DATA_FILE, "w") as f_out:
                     f_out.write(f"window.tournamentData = {json.dumps(data, indent=4)};\ninitRender();")
-            # ------------------------------------
             
             return data
     except:
@@ -104,17 +102,32 @@ def update_scores():
     match = data[round_key][m_idx]
     
     print(f"\nEntering scores for: {match['p1']} vs {match['p2']}")
-    match['s1_1'] = int(input(f"  {match['p1']} (Leg 1 Goals): ") or 0)
-    match['s1_2'] = int(input(f"  {match['p1']} (Leg 2 Goals): ") or 0)
-    match['s2_1'] = int(input(f"  {match['p2']} (Leg 1 Goals): ") or 0)
-    match['s2_2'] = int(input(f"  {match['p2']} (Leg 2 Goals): ") or 0)
     
-    tot1 = match['s1_1'] + match['s1_2']
-    tot2 = match['s2_1'] + match['s2_2']
+    # Unique 1-Leg Logic Condition for the Grand Final
+    if round_key == "f":
+        match['s1_1'] = int(input(f"  {match['p1']} Goals: ") or 0)
+        match['s1_2'] = None
+        match['s2_1'] = int(input(f"  {match['p2']} Goals: ") or 0)
+        match['s2_2'] = None
+        
+        tot1 = match['s1_1']
+        tot2 = match['s2_1']
+    else:
+        # Standard 2-Leg Logic for prior rounds
+        match['s1_1'] = int(input(f"  {match['p1']} (Leg 1 Goals): ") or 0)
+        match['s1_2'] = int(input(f"  {match['p1']} (Leg 2 Goals): ") or 0)
+        match['s2_1'] = int(input(f"  {match['p2']} (Leg 1 Goals): ") or 0)
+        match['s2_2'] = int(input(f"  {match['p2']} (Leg 2 Goals): ") or 0)
+        
+        tot1 = match['s1_1'] + match['s1_2']
+        tot2 = match['s2_1'] + match['s2_2']
     
-    if tot1 > tot2: match['w'] = 1
-    elif tot2 > tot1: match['w'] = 2
-    else: match['w'] = int(input("Draw on aggregate! Who won penalties? (1 or 2): "))
+    if tot1 > tot2: 
+        match['w'] = 1
+    elif tot2 > tot1: 
+        match['w'] = 2
+    else: 
+        match['w'] = int(input("Draw! Who won penalties? (Type 1 or 2): "))
 
     winner_name = match['p1'] if match['w'] == 1 else match['p2']
 

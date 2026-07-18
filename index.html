@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Player - S13 Update</title>
+    <title>Ultimate Player - S13 Grand Final</title>
     <style>
         :root {
             --bg-color: #060a13;
@@ -238,7 +238,7 @@
 
     <header>
         <h1>Ultimate Player</h1>
-        <div class="subtitle">Season 13 • 16-Player Knockout (2-Legs)</div>
+        <div class="subtitle">Season 13 • 16-Player Knockout (2-Legs • Final 1-Leg)</div>
         <div class="controls">
             <button class="btn" onclick="toggleTheme()">🌓 Toggle Theme</button>
         </div>
@@ -269,7 +269,7 @@
 
         <!-- CENTER GRAND FINAL -->
         <div class="center-final" id="sec-center">
-            <div class="round-title" style="color: gold;">Grand Final</div>
+            <div class="round-title" style="color: gold;">Grand Final (1 Leg)</div>
             <div id="final-match-container" style="width: 100%;"></div>
             
             <h3>🏆 CHAMPION</h3>
@@ -317,24 +317,28 @@
             document.getElementById(`sec-${section}`).classList.add('active-section');
         }
 
-        function generateMatchHTML(m) {
+        function generateMatchHTML(m, isFinal = false) {
             const s1_1 = (m.s1_1 === null || m.s1_1 === undefined) ? '-' : m.s1_1;
             const s1_2 = (m.s1_2 === null || m.s1_2 === undefined) ? '-' : m.s1_2;
             const s2_1 = (m.s2_1 === null || m.s2_1 === undefined) ? '-' : m.s2_1;
             const s2_2 = (m.s2_2 === null || m.s2_2 === undefined) ? '-' : m.s2_2;
+
+            // Conditional rendering layout to hide Leg 2 boxes during the Grand Final view
+            const scoreLayout1 = isFinal ? `<span class="score">${s1_1}</span>` : `<span class="score">${s1_1}</span><span class="score">${s1_2}</span>`;
+            const scoreLayout2 = isFinal ? `<span class="score">${s2_1}</span>` : `<span class="score">${s2_1}</span><span class="score">${s2_2}</span>`;
 
             return `
                 <div class="match">
                     <div class="team ${m.w === 1 ? 'winner' : ''}">
                         <span>${m.p1}</span> 
                         <div class="scores-wrapper">
-                            <span class="score">${s1_1}</span><span class="score">${s1_2}</span>
+                            ${scoreLayout1}
                         </div>
                     </div>
                     <div class="team ${m.w === 2 ? 'winner' : ''}">
                         <span>${m.p2}</span> 
                         <div class="scores-wrapper">
-                            <span class="score">${s2_1}</span><span class="score">${s2_2}</span>
+                            ${scoreLayout2}
                         </div>
                     </div>
                 </div>
@@ -346,7 +350,7 @@
             if (!container) return;
             container.innerHTML = '';
             matches.forEach(m => {
-                container.innerHTML += generateMatchHTML(m);
+                container.innerHTML += generateMatchHTML(m, false);
             });
         }
 
@@ -359,10 +363,10 @@
             renderSide(tournamentData.sf.slice(0, 1), 'sf-left');
             renderSide(tournamentData.sf.slice(1, 2), 'sf-right');
             
-            // Grand Final Card
+            // Grand Final Card marked explicitly as true for 1-leg look
             const finalContainer = document.getElementById('final-match-container');
             if(finalContainer && tournamentData.f) {
-                finalContainer.innerHTML = generateMatchHTML(tournamentData.f[0]);
+                finalContainer.innerHTML = generateMatchHTML(tournamentData.f[0], true);
             }
             
             document.getElementById('champion-display').innerText = tournamentData.champion || "TBD";
