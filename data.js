@@ -135,13 +135,13 @@ window.tournamentData = {
         {
             "p1": "Shrestha Sakar",
             "p2": "Bixu Thapa",
-            "s1_1": null,
+            "s1_1": 5,
             "s1_2": null,
-            "s2_1": null,
+            "s2_1": 3,
             "s2_2": null,
-            "w": 0
+            "w": 1
         }
     ],
-    "champion": "TBD"
+    "champion": "Shrestha Sakar"
 };
 initRender();
